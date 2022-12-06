@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 body{
     background: url(/images/bg-intro-desktop.png);
@@ -10,12 +11,16 @@ body{
 }
 .main-container{
     color: #ffffff;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 .hero-container{
     display: flex;
     justify-content: center;
     margin: 1em auto;
-    padding: 6em;
+    padding: 7em;
     align-items: center;
 }
 .flex-text{
@@ -32,16 +37,18 @@ body{
 .flex-form-text p{
     border-radius: 5px;
     background-color: hsl(248, 32%, 49%);
-    font-weight: 500;
-    padding: 10px;
-    margin: 12px;
+    font-weight: 400;
+    padding: 8px;
+    margin: 10px;
+    font-size: 12px;
     text-align: center;
-    box-sizing: content-box;
     box-shadow: 0px 8px 5px 0px rgba(77, 77, 77, 0.46);
 }
 form{
-    margin: 10px;
-    padding: 6px;
+    display: block;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
     border-radius: 5px;
     background-color: #ffffff;
     box-shadow: 0px 8px 5px 0px rgba(148,148,148,0.46);
@@ -49,10 +56,10 @@ form{
 -moz-box-shadow: 0px 8px 5px 0px rgba(148,148,148,0.46);
 }
 form input, button{
-    margin: 9px;
-    min-width: 90%;
+    margin: 15px auto;
+    min-width: 100%;
     border: 1px solid hsla(246, 25%, 77%, 0.212);
-    padding: 10px;
+    padding: 13px;
     border-radius: 5px;
    
 }
@@ -79,6 +86,11 @@ form p{
 form strong{
     color: hsl(0, 100%, 74%);
 }
+
+.caution{
+    background: url(/images/icon-error.svg) no-repeat center right;
+}
+
 
 @media (max-width:400px ){
     body{

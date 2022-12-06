@@ -7,12 +7,6 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
   <title>Frontend Mentor | Intro component with sign up form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 <div class="main-container">
@@ -27,25 +21,22 @@
       <div class="flex-form-text">
         <p> <b>Try it free 7 days</b> then $20/mo. thereafter</p>
       </div>
-      <form  name="myForm" action="" onsubmit = "return(validate());">
-        <input type="text" name="fname" placeholder="First Name">
-        <input type="text" name="lname" placeholder="Last Name">
-        <input type="email" name="email" placeholder="Email Address">
-        <input type="password" name="password" placeholder="password">
-        <!-- <input type="submit" value="Claim your free trial"> -->
-        <button type="submit"> Claim your free trial</button>
+      <form action="" >
+        <input type="text" id="fname" placeholder="First Name">
+        <p class="error" id="fname-error"></p>
+        <input type="text" id="lname" placeholder="Last Name">
+        <p class="error" id="lname-error"></p>
+        <input type="email" id="email" placeholder="Email Address">
+        <p class="error"  id="email-error"></p>
+        <input type="password" id="password" placeholder="password" autocomplete="off">
+        <p class="error" id="pass-error"></p>
+        <button type="submit" onclick="return(validate())"> Claim your free trial</button>
         <p> By clicking the button, you are agreeing to our <strong>Terms and Services</strong> </p>
       </form>
     </div>
   </div>
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
 </div>
 
-<script src="/index.js"></script>  
+<script src="/app.js"></script>  
 </body>
 </html>
