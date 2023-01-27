@@ -14,7 +14,7 @@ function displayCaution(elementId) {
 document.getElementById("submit-button").addEventListener("click",validate)
 
 function validate() {
-    const inputs = document.querySelectorAll("input")
+    var inputs = document.querySelectorAll("input")
     for (let i = 0; i < inputs.length; i++) {
         if (inputs[i].value==="") {
             showError("fname-error", "First Name cannot be empty");
