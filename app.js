@@ -1,41 +1,43 @@
+function showError(errorElement, errorMessage){
+    document.querySelector("."+errorElement).classList.add("display-error");
+    document.querySelector("."+errorElement).innerHTML=errorMessage;
+
+}
+function redBorderError(elementId){
+    let caution = document.getElementById(elementId);
+    caution.style.borderColor = "red";
+}
+function displayCaution(elementId) {
+    let targetField = document.getElementById(elementId)
+    targetField.setAttribute("class", "caution")
+}
+document.getElementById("submit-button").addEventListener("click",validate)
+
 function validate() {
-var fname = document.getElementById("fname").value;
-var lname = document.getElementById("lname").value;
-let email = document.getElementById("email").value;
-let password = document.getElementById("password").value;
-    
-    if( fname === "" ) {
-        var caution = document.getElementById("fname");
-        var text = document.getElementById("fname-error");
-        text.innerHTML = "First Name cannot be empty" 
-        caution.setAttribute("class", "caution");
-        caution.style.borderColor="red";
-        console.log("First Name cannot be empty" );
-         }
-     if (lname === "") {
-        var caution = document.getElementById("lname");
-        var text = document.getElementById("lname-error");
-        text.innerHTML = "Last Name cannot be empty" 
-        caution.setAttribute("class", "caution");
-        caution.style.borderColor="red";
-        console.log("Last Name cannot be empty" );
-        } 
-    if (email===""||!email==="@"||email==="/") {
-        var caution = document.getElementById("email");
-        var text = document.getElementById("email-error");
-        text.innerHTML = "Looks like this is not sn email" 
-        caution.setAttribute("class", "caution");
-        caution.style.borderColor="red";
-        console.log("Looks like this is not an email");
-      }
-    if (password==="") {
-        var caution = document.getElementById("password");
-        var text = document.getElementById("pass-error");
-        text.innerHTML = "Password Name cannot be empty" 
-        caution.setAttribute("class", "caution");
-        caution.style.borderColor="red";
-        console.log("First Name cannot be empty" );
-        return false;  
-     }
-     return true;
+    const inputs = document.querySelectorAll("input")
+    for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i].value==="") {
+            showError("fname-error", "First Name cannot be empty");
+            redBorderError(inputs[i].id)
+            displayCaution(inputs[i].id)
+            return false;
+        } else 
+        // if (inputs[i].value===""&&inputs[i].id==="lname") {
+        //     showError("lname-error", "Last Name cannot be empty");
+        //     redBorderError("lname")
+        //     displayCaution("lname")
+        //     return false;
+        // }else if (inputs[i].id==="email"&& inputs[i].value===""||
+        // !inputs.value==="@"||inputs.value==="/") {
+        //     showError("email-error", "Looks like this is not an email");
+        //     redBorderError("email")
+        //     displayCaution("email")
+        // }else if (inputs[i].id==="password"&&inputs[i].value==="") {
+        //     showError("password-error", "Password cannot be empty");
+        //     redBorderError("password")
+        //     displayCaution("password")
+        // }else 
+        return true;
+        
+    }
 }

@@ -7,7 +7,7 @@ body{
     background: url(/images/bg-intro-desktop.png);
     background-color: hsl(0, 100%, 74%);
     font-size: 16px;
-    font-family: Poppins;
+    font-family: poppins;
 }
 .main-container{
     color: #ffffff;
@@ -20,11 +20,13 @@ body{
     display: flex;
     justify-content: center;
     margin: 1em auto;
-    padding: 7em;
+    padding: 8em;
     align-items: center;
 }
 .flex-text{
-    padding: 7em ;
+    padding: 1em ;
+    margin: 1em auto;
+    width: auto;
 }
 .flex-text h1{
     font-weight: 700;
@@ -33,15 +35,16 @@ body{
 }
 .flex-form{
     padding: 1em;
+    margin: 1em auto;
+    width: auto;
 }
-.flex-form-text p{
+.flex-form-text{
     border-radius: 5px;
     background-color: hsl(248, 32%, 49%);
     font-weight: 400;
-    padding: 8px;
-    margin: 10px;
-    font-size: 12px;
     text-align: center;
+    box-sizing: content-box;
+    margin: 1em auto;
     box-shadow: 0px 8px 5px 0px rgba(77, 77, 77, 0.46);
 }
 form{
@@ -57,7 +60,8 @@ form{
 }
 form input, button{
     margin: 15px auto;
-    min-width: 100%;
+    width: 100%;
+    font-weight: 400;
     border: 1px solid hsla(246, 25%, 77%, 0.212);
     padding: 13px;
     border-radius: 5px;
@@ -84,7 +88,13 @@ form p{
     padding: 10px;
 }
 form strong{
-    color: hsl(0, 100%, 74%);
+    color: hsl(0, 100%, 70%);
+}
+
+.error.display-error{
+    color: hsl(0, 100%, 70%);
+    font-size: 10px;
+    float: right;
 }
 
 .caution{
